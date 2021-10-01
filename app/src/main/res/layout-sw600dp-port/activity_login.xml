@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondo"
+    tools:context=".LoginActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="12dp"
+        android:layout_weight="12"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="40dp"
+            android:layout_weight="20"
+
+            app:srcCompat="@drawable/arte_" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etemail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="18dp"
+        android:layout_weight="4"
+        android:ems="10"
+        android:hint="Email"
+        android:textSize="25dp" />
+
+    <EditText
+        android:id="@+id/etpassword"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="18dp"
+        android:layout_weight="4"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:textColor="@color/black"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/btningresar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="7dp"
+        android:layout_weight="4"
+        android:background="@drawable/btn_style"
+        android:onClick="ingresar"
+        android:text="Ingresar"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/btnregistrarse"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="50dp"
+        android:layout_weight="4"
+        android:background="@drawable/btn_style"
+        android:text="Registrarse"
+        android:onClick="Registrarse"
+        android:textSize="25dp" />
+
+
+</LinearLayout>

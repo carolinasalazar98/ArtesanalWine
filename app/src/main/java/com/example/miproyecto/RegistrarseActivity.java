@@ -47,7 +47,7 @@ public class RegistrarseActivity extends AppCompatActivity {
         jbtnregresar=findViewById (R.id.btnregresar);
         spinner1=findViewById (R.id.spinner);
 
-        String [] opciones={"Rol","-Usuario","-Vendedor"};
+        String [] opciones={"Rol","°Usuario","°Vendedor"};
         ArrayAdapter <String> adapter = new ArrayAdapter<String> (this, android.R.layout.simple_spinner_item,opciones);
         spinner1.setAdapter (adapter);
 
@@ -108,7 +108,7 @@ public class RegistrarseActivity extends AppCompatActivity {
         if (password.isEmpty ()) {
             jetclave.setError ("El campo no puede estar vacio");
             return false;
-        } else if (!Pattern.matches("^(?=\\w*\\d)(?=\\w*[A-Z])(?=\\w*[a-z])\\S{6,20}$", password)) {
+        } else if (!Pattern.matches("^(?=\\w*\\d)(?=\\w*[A-Z])(?=\\w*[a-z])(?=\\w*[@#$%^&+=])\\S{6,20}$", password)) {
             jetclave.setError ("Contraseña muy debíl");
             return false;
         }else{

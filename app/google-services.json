@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "496615621435",
+    "project_id": "moviles-2-jueves",
+    "storage_bucket": "moviles-2-jueves.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:496615621435:android:e32ed16da7fa04ef962d1e",
+        "android_client_info": {
+          "package_name": "com.example.miproyecto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "496615621435-2d9e1ctnu58nnn8cvueliquosia5vr58.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1oc8xw33qT69XaetxN8VGyY5A02eTSn0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "496615621435-2d9e1ctnu58nnn8cvueliquosia5vr58.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:496615621435:android:cbd3405683107978962d1e",
+        "android_client_info": {
+          "package_name": "com.moviles2.moviles2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "496615621435-2d9e1ctnu58nnn8cvueliquosia5vr58.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1oc8xw33qT69XaetxN8VGyY5A02eTSn0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "496615621435-2d9e1ctnu58nnn8cvueliquosia5vr58.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

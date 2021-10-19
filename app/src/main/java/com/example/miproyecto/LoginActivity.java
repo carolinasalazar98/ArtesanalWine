@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -29,11 +31,14 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText etemail, etpassword;
     Button btningresar, btnregistrarse;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
         setContentView (R.layout.activity_login);
+
+        mAuth = FirebaseAuth.getInstance();
 
 
         etemail = findViewById (R.id.etemail);
@@ -64,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
         if (password.isEmpty ()) {
             etpassword.setError ("El campo no puede estar vacio");
             return false;
-        } else if (!Pattern.matches("^(?=\\w*\\d)(?=\\w*[A-Z])(?=\\w*[a-z])\\S{6,20}$", password)) {
+        } else if (!Pattern.matches("^(?=\\w*\\d)(?=\\w*[A-Z])(?=\\w*[a-z])(?=\\w*[@#$%^&+=])\\S{6,20}$", password)) {
             etpassword.setError ("Contraseña muy debíl");
             return false;
         }else{

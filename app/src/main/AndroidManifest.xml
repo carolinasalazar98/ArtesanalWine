@@ -4,9 +4,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/icwine_round"
+        android:icon="@mipmap/ic_tienda_round"
         android:label="Artesanal Wine"
-        android:roundIcon="@mipmap/icwine_round"
+        android:roundIcon="@mipmap/ic_tienda_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MiProyecto">
         <activity android:name=".RegistrarseActivity"></activity>

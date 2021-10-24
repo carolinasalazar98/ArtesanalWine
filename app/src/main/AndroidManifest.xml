@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_tienda_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MiProyecto">
-        <activity android:name=".RegistrarseActivity"></activity>
+        <activity android:name=".Adapters.EditProductsActivity"></activity>
+        <activity android:name=".ListProductsActivity" />
+        <activity android:name=".RegistrarseActivity" />
         <activity android:name=".MostrarActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity">

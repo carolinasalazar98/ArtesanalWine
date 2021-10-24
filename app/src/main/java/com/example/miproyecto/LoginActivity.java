@@ -12,6 +12,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.miproyecto.Adapters.EditProductsActivity;
+import com.example.miproyecto.databinding.ActivityListProductsBinding;
+import com.example.miproyecto.entities.ProductEntity;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.regex.Matcher;
@@ -82,8 +85,8 @@ public class LoginActivity extends AppCompatActivity {
         if(!validateEmail () | !validatePassword ()){
             return;
         }else{
-            Intent intmostrar=new Intent(this,MostrarActivity.class);
-            startActivity(intmostrar);
+            Intent intentlist=new Intent(this, ListProductsActivity.class);
+            startActivity(intentlist);
         }
     }
     public void Registrarse(View view){

@@ -61,7 +61,7 @@
         android:layout_marginBottom="7dp"
         android:layout_weight="4"
         android:background="@drawable/btn_style"
-        android:onClick="ingresar"
+        android:onClick="login"
         android:text="Ingresar"
         android:textSize="25dp" />
 

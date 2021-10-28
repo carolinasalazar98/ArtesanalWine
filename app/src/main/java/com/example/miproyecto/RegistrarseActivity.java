@@ -128,6 +128,25 @@ public class RegistrarseActivity extends AppCompatActivity {
             return true;
         }
     }
+    public void register(View View){
+        String email = jetemail.getText().toString();
+        String password = jetclave.getText().toString();
+        mAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            saveUserToFirestore();
+                            Toast.makeText(getApplicationContext(),
+                                    "Registro exitoso", Toast.LENGTH_SHORT).show();
+                        }
+                        else{
+                            Log.d("Error:", "" + task.getException());
+                            Toast.makeText(getApplicationContext(), "Sea Serio:", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+    }
     public void Registrarse(View view){
         if(!validateNombre ()| !validateEmail () | !validatepais ()| !validateciudad ()| !validatePassword ()| !validatenomtienda ()){
             return;

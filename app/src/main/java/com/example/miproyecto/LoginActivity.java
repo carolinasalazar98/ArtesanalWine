@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.miproyecto.Adapters.EditProductsActivity;
+import com.example.miproyecto.Adapters.ProductAdapter;
 import com.example.miproyecto.databinding.ActivityLoginBinding;
 import com.example.miproyecto.databinding.ActivityMainBinding;
 import com.example.miproyecto.entities.ProductEntity;
@@ -77,13 +78,15 @@ public class LoginActivity extends AppCompatActivity {
                                 Toast.makeText (getApplicationContext (),
                                         "Login exitoso", Toast.LENGTH_SHORT).show ();
                                 Intent intent = new Intent (getApplicationContext (), ListProductsActivity.class);
-                                startActivity (intent);
+                                startActivity(intent);
                             } else {
                                 Toast.makeText (getApplicationContext (), "Login Fallido", Toast.LENGTH_SHORT).show ();
                             }
                         }
                     });
+
         }
+
     }
 
     public void Registrarse(View view){

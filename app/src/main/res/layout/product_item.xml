@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:background="@drawable/fondo"
     android:layout_height="wrap_content"
     >
 
@@ -45,6 +46,14 @@
                 android:layout_marginRight="10dp" />
 
             <TextView
+                android:id="@+id/tvCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp" />
+
+            <TextView
                 android:id="@+id/tvDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -63,6 +72,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
+                    android:background="@drawable/btn_style"
                     android:text="@string/btn_edit" />
 
                 <Button
@@ -71,6 +81,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
+                    android:background="@drawable/btn_style"
                     android:text="@string/btn_delete" />
             </LinearLayout>
         </LinearLayout>

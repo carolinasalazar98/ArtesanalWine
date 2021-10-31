@@ -10,6 +10,7 @@ public class ProductEntity implements Serializable {
     private String name;
     private Double price;
     private int stock;
+    private String category;
     private String description;
 
     public String getId() {
@@ -42,6 +43,14 @@ public class ProductEntity implements Serializable {
 
     public void setStock(int stock) {
         this.stock = stock;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     public String getDescription() {

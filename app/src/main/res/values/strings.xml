@@ -10,6 +10,7 @@
     <string name="product_name">Nombre Producto</string>
     <string name="product_price">Precio</string>
     <string name="product_stock">Unidades Disponibles</string>
+    <string name="product_category">Categoria</string>
     <string name="product_description">Descripcion</string>
 
 </resources>

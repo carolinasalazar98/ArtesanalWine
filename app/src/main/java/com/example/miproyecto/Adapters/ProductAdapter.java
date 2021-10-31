@@ -5,15 +5,12 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.miproyecto.ListProductsActivity;
-import com.example.miproyecto.databinding.ActivityListProductsBinding;
 import com.example.miproyecto.databinding.ProductItemBinding;
 import com.example.miproyecto.entities.ProductEntity;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -21,7 +18,6 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductViewHolder> {
 
@@ -53,6 +49,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         holder.itemBinding.tvProductName.setText (product.getName ());
         holder.itemBinding.tvDescription.setText (product.getDescription ());
         holder.itemBinding.tvStock.setText (String.valueOf (product.getStock ()));
+        holder.itemBinding.tvCategory.setText (product.getCategory ());
         holder.itemBinding.tvPrice.setText (String.valueOf (product.getName ()));
         AlertDialog.Builder builder = new AlertDialog.Builder (context);
         builder.setPositiveButton ("Aceptar", new DialogInterface.OnClickListener () {

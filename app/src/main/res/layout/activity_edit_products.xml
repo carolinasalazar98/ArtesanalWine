@@ -4,87 +4,101 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo"
     tools:context=".Adapters.EditProductsActivity">
 
     <EditText
         android:id="@+id/etName"
-        android:layout_width="248dp"
-        android:layout_height="54dp"
+        android:layout_width="300dp"
+        android:layout_height="52dp"
         android:ems="10"
+        android:hint="@string/product_name"
         android:inputType="textPersonName"
-        android:text="@string/product_name"
         app:layout_constraintBottom_toTopOf="@+id/etPrice"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintHorizontal_bias="0.387"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.486" />
+        app:layout_constraintVertical_bias="0.866" />
 
     <EditText
         android:id="@+id/etPrice"
-        android:layout_width="229dp"
-        android:layout_height="58dp"
+        android:layout_width="300dp"
+        android:layout_height="52dp"
         android:ems="10"
+        android:hint="@string/product_price"
         android:inputType="textPersonName"
-        android:text="@string/product_price"
         app:layout_constraintBottom_toTopOf="@+id/etStock"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.39"
+        app:layout_constraintHorizontal_bias="0.387"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.667" />
+        app:layout_constraintVertical_bias="0.912" />
 
     <EditText
         android:id="@+id/etStock"
-        android:layout_width="228dp"
-        android:layout_height="58dp"
+        android:layout_width="300dp"
+        android:layout_height="52dp"
         android:ems="10"
+        android:hint="@string/product_stock"
         android:inputType="textPersonName"
-        android:text="@string/product_stock"
         app:layout_constraintBottom_toTopOf="@+id/etDescription"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.387"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.731" />
+        app:layout_constraintVertical_bias="0.781" />
 
     <EditText
         android:id="@+id/etCategory"
-        android:layout_width="223dp"
-        android:layout_height="55dp"
+        android:layout_width="300dp"
+        android:layout_height="52dp"
         android:ems="10"
         android:hint="@string/product_category"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/etDescription"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.377"
+        app:layout_constraintHorizontal_bias="0.387"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etStock"
-        app:layout_constraintVertical_bias="0.592" />
+        app:layout_constraintVertical_bias="0.542" />
 
     <EditText
         android:id="@+id/etDescription"
-        android:layout_width="236dp"
-        android:layout_height="68dp"
+        android:layout_width="300dp"
+        android:layout_height="52dp"
         android:ems="10"
+        android:hint="@string/product_description"
         android:inputType="textPersonName"
-        android:text="@string/product_description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintHorizontal_bias="0.441"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.679" />
+        app:layout_constraintVertical_bias="0.788" />
 
     <Button
         android:id="@+id/btnUpdate"
-        android:layout_width="228dp"
-        android:layout_height="92dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:background="@drawable/btn_style"
         android:text="@string/btn_update"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintHorizontal_bias="0.441"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.824" />
+        app:layout_constraintVertical_bias="0.899" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/etName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.364"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.595"
+        app:srcCompat="@drawable/arte_" />
 </androidx.constraintlayout.widget.ConstraintLayout>

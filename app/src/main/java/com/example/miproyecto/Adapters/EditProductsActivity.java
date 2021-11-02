@@ -44,7 +44,7 @@ public class EditProductsActivity extends AppCompatActivity  implements View.OnC
     public void onClick(View v) {
         Map<String, Object> dataProduct = new HashMap<> ();
         dataProduct.put("name", editProductsBinding.etName.getText ().toString ());
-        dataProduct.put("Price", Double.parseDouble (editProductsBinding.etPrice.getText ().toString ()));
+        dataProduct.put("price", Double.parseDouble (editProductsBinding.etPrice.getText ().toString ()));
         dataProduct.put("stock", Integer.parseInt (editProductsBinding.etStock.getText ().toString ()));
         dataProduct.put ("category", editProductsBinding.etCategory.getText ().toString ());
         dataProduct.put("description", editProductsBinding.etDescription.getText ().toString ());
@@ -54,12 +54,12 @@ public class EditProductsActivity extends AppCompatActivity  implements View.OnC
                     .update (dataProduct)
                     .addOnSuccessListener (aVoid -> {
                         Toast.makeText (getApplicationContext (),
-                                "product updated", Toast.LENGTH_LONG).show ();
+                                "producto Actualizado", Toast.LENGTH_LONG).show ();
                         Intent intent = new Intent (getApplicationContext (), ListProductsActivity.class);
                         startActivity (intent);
                         finish ();
                     })
-                    .addOnFailureListener (e -> Toast.makeText (getApplicationContext (), "Error updating product", Toast.LENGTH_LONG).show ());
+                    .addOnFailureListener (e -> Toast.makeText (getApplicationContext (), "Error Actualizando producto", Toast.LENGTH_LONG).show ());
         }
     }
 }

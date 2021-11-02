@@ -50,7 +50,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         holder.itemBinding.tvDescription.setText (product.getDescription ());
         holder.itemBinding.tvStock.setText (String.valueOf (product.getStock ()));
         holder.itemBinding.tvCategory.setText (product.getCategory ());
-        holder.itemBinding.tvPrice.setText (String.valueOf (product.getName ()));
+        holder.itemBinding.tvPrice.setText (String.valueOf (product.getPrice ()));
         AlertDialog.Builder builder = new AlertDialog.Builder (context);
         builder.setPositiveButton ("Aceptar", new DialogInterface.OnClickListener () {
             @Override
@@ -86,7 +86,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         });
         holder.itemBinding.btnEdit.setOnClickListener (v -> {
             Intent intent = new Intent (context, EditProductsActivity.class);
-            intent.putExtra ("product", product);
+            intent.putExtra ("products", product);
             context.startActivity (intent);
         });
     }

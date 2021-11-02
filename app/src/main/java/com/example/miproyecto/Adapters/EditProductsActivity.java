@@ -29,14 +29,14 @@ public class EditProductsActivity extends AppCompatActivity  implements View.OnC
         setContentView (view);
         editProductsBinding.btnUpdate.setOnClickListener (this);
         Intent intent = getIntent ();
-        product= (ProductEntity) intent.getSerializableExtra ("product");
+        product= (ProductEntity) intent.getSerializableExtra ("products");
         db = FirebaseFirestore.getInstance ();
 
         editProductsBinding.etName.setText (product.getName ());
         editProductsBinding.etPrice.setText (String.valueOf (product.getPrice()));
         editProductsBinding.etStock.setText (String.valueOf (product.getStock ()));
-        //editProductsBinding.etCategory.setText(product.getCategory ());
         editProductsBinding.etDescription.setText (product.getDescription ());
+        editProductsBinding.etCategory.setText (product.getCategory ());
     }
 
 
@@ -46,7 +46,7 @@ public class EditProductsActivity extends AppCompatActivity  implements View.OnC
         dataProduct.put("name", editProductsBinding.etName.getText ().toString ());
         dataProduct.put("Price", Double.parseDouble (editProductsBinding.etPrice.getText ().toString ()));
         dataProduct.put("stock", Integer.parseInt (editProductsBinding.etStock.getText ().toString ()));
-
+        dataProduct.put ("category", editProductsBinding.etCategory.getText ().toString ());
         dataProduct.put("description", editProductsBinding.etDescription.getText ().toString ());
         if(v.getId() == editProductsBinding.btnUpdate.getId()){
             db.collection ("products")

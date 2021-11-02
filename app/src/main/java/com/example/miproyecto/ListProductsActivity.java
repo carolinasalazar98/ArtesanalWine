@@ -22,25 +22,24 @@ import java.util.List;
 
 public class ListProductsActivity extends AppCompatActivity {
 
-    private ActivityListProductsBinding ListProductsBinding;
+    private ActivityListProductsBinding listProductsBinding;
     private FirebaseFirestore db;
+    ArrayList<ProductEntity> productEntityArrayList;
     ProductAdapter productAdapter;
-    List<ProductEntity> arrayProducts=  new ArrayList<>();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
-        ListProductsBinding = ActivityListProductsBinding.inflate (getLayoutInflater ());
-        View view = ListProductsBinding.getRoot ();
+        listProductsBinding = ActivityListProductsBinding.inflate (getLayoutInflater ());
+        View view = listProductsBinding.getRoot ();
         setContentView (view);
         //solo puede haber un setContentView. Arreglo que sea dinamico se llaman list
         db = FirebaseFirestore.getInstance();
-        arrayProducts = new ArrayList<> ();
-        productAdapter = new ProductAdapter (this, (ArrayList<ProductEntity>) arrayProducts, db);
-        ListProductsBinding.rvProducts.setHasFixedSize (true);
-        ListProductsBinding.rvProducts.setLayoutManager (new LinearLayoutManager (this));
-        ListProductsBinding.rvProducts.setAdapter (productAdapter);
+        productEntityArrayList = new ArrayList<> ();
+        productAdapter = new ProductAdapter (this, productEntityArrayList, db);
+        listProductsBinding.rvProducts.setHasFixedSize (true);
+        listProductsBinding.rvProducts.setLayoutManager (new LinearLayoutManager (this));
+        listProductsBinding.rvProducts.setAdapter (productAdapter);
         getProducts ();
 
     }
@@ -57,7 +56,7 @@ public class ListProductsActivity extends AppCompatActivity {
                      }
                      for(DocumentChange dc : value.getDocumentChanges ()){
                          if(dc.getType ()== DocumentChange.Type.ADDED){
-                             arrayProducts.add (dc.getDocument ().toObject (ProductEntity.class));
+                             productEntityArrayList.add (dc.getDocument ().toObject (ProductEntity.class));
                          }
 
                      }

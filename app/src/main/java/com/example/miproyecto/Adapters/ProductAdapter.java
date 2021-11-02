@@ -39,7 +39,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     @NonNull
     @Override
     public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        productItemBinding = productItemBinding.inflate (LayoutInflater.from (context));
+        productItemBinding = ProductItemBinding.inflate (LayoutInflater.from (context));
         return new ProductViewHolder (productItemBinding);
     }
 
@@ -92,10 +92,9 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     }
 
 
-
-
     @Override
-    public int getItemCount() {
+    public int getItemCount()
+    {
         return productsArrayList.size ();
     }
 

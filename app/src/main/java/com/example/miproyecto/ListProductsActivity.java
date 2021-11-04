@@ -1,10 +1,13 @@
 package com.example.miproyecto;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -43,6 +46,8 @@ public class ListProductsActivity extends AppCompatActivity {
         getProducts ();
 
     }
+
+    
     public void getProducts(){
         db.collection ("products")
                 .addSnapshotListener (new EventListener<QuerySnapshot> () {

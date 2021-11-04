@@ -85,7 +85,10 @@
                     android:background="@drawable/btn_style"
                     android:text="@string/btn_delete"
                     android:textSize="18dp" />
+
+
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
 </RelativeLayout>

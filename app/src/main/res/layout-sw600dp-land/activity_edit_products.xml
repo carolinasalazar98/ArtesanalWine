@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".Adapters.EditProductsActivity">
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="476dp"
+        android:layout_height="94dp"
+        android:ems="10"
+        android:hint="@string/product_name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etPrice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.102"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.664" />
+
+    <EditText
+        android:id="@+id/etPrice"
+        android:layout_width="469dp"
+        android:layout_height="99dp"
+        android:ems="10"
+        android:hint="@string/product_price"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etStock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.102"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.873" />
+
+    <EditText
+        android:id="@+id/etStock"
+        android:layout_width="446dp"
+        android:layout_height="102dp"
+        android:ems="10"
+        android:hint="@string/product_stock"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        app:layout_constraintVertical_bias="0.148" />
+
+    <EditText
+        android:id="@+id/etCategory"
+        android:layout_width="454dp"
+        android:layout_height="90dp"
+        android:ems="10"
+        android:hint="@string/product_category"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etStock"
+        app:layout_constraintVertical_bias="0.448" />
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="464dp"
+        android:layout_height="91dp"
+        android:ems="10"
+        android:hint="@string/product_description"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.86" />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="440dp"
+        android:layout_height="144dp"
+        android:background="@drawable/btn_style"
+        android:text="@string/btn_update"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.689" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="448dp"
+        android:layout_height="284dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.093"
+        app:srcCompat="@drawable/arte_" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,7 +5,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -37,7 +39,7 @@ public class ListProductsActivity extends AppCompatActivity {
         View view = listProductsBinding.getRoot ();
         setContentView (view);
         //solo puede haber un setContentView. Arreglo que sea dinamico se llaman list
-        db = FirebaseFirestore.getInstance();
+        db = FirebaseFirestore.getInstance ();
         productEntityArrayList = new ArrayList<> ();
         productAdapter = new ProductAdapter (this, productEntityArrayList, db);
         listProductsBinding.rvProducts.setHasFixedSize (true);
@@ -47,26 +49,32 @@ public class ListProductsActivity extends AppCompatActivity {
 
     }
 
-    
-    public void getProducts(){
+    public void getProducts() {
         db.collection ("products")
                 .addSnapshotListener (new EventListener<QuerySnapshot> () {
                     @Override
                     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
-                     if(error != null){
-                         Toast.makeText (getApplicationContext (),
-                                 "failed to retrive data", Toast.LENGTH_LONG).show ();
-                         return;
+                        if (error != null) {
+                            Toast.makeText (getApplicationContext (),
+                                    "failed to retrive data", Toast.LENGTH_LONG).show ();
+                            return;
 
-                     }
-                     for(DocumentChange dc : value.getDocumentChanges ()){
-                         if(dc.getType ()== DocumentChange.Type.ADDED){
-                             productEntityArrayList.add (dc.getDocument ().toObject (ProductEntity.class));
-                         }
+                        }
+                        for (DocumentChange dc : value.getDocumentChanges ()) {
+                            if (dc.getType () == DocumentChange.Type.ADDED) {
+                                Log.d ("TAG", dc.getDocument ().toString ());
+                                productEntityArrayList.add (dc.getDocument ().toObject (ProductEntity.class));
+                            }
 
-                     }
-                     productAdapter.notifyDataSetChanged ();
+                        }
+                        productAdapter.notifyDataSetChanged ();
                     }
                 });
+    }
+
+    public void agregar(View view) {
+        Intent intadd = new Intent (this, AddProductActivity.class);
+        startActivity (intadd);
+
     }
 }

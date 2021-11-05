@@ -9,15 +9,15 @@
 
     <ImageView
         android:id="@+id/ivProduct"
-        android:layout_width="281dp"
-        android:layout_height="148dp"
+        android:layout_width="262dp"
+        android:layout_height="149dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.416"
+        app:layout_constraintHorizontal_bias="0.046"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.037"
-        tools:srcCompat="@drawable/vinos" />
+        app:layout_constraintVertical_bias="0.125"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <Button
         android:id="@+id/btnPickImage"
@@ -26,37 +26,34 @@
         android:background="@drawable/btn_style"
         android:onClick="pickImage"
         android:text="@string/pick_image"
-        android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.064"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivProduct"
-        app:layout_constraintVertical_bias="0.037" />
+        app:layout_constraintVertical_bias="0.172" />
 
     <ScrollView
-        android:layout_width="346dp"
-        android:layout_height="457dp"
-        android:layout_marginTop="55dp"
+        android:layout_width="430dp"
+        android:layout_height="395dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.753"
+        app:layout_constraintHorizontal_bias="0.984"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnPickImage"
-        app:layout_constraintVertical_bias="0.519">
+        app:layout_constraintVertical_bias="0.872">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <EditText
                 android:id="@+id/etProductName"
                 android:layout_width="260dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="32dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="8dp"
                 android:ems="10"
                 android:hint="@string/product_name"
                 android:inputType="textPersonName"
@@ -66,8 +63,8 @@
                 android:id="@+id/etPrice"
                 android:layout_width="260dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="32dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="8dp"
                 android:ems="10"
                 android:hint="@string/product_price"
                 android:inputType="textPersonName"
@@ -77,8 +74,8 @@
                 android:id="@+id/etStock"
                 android:layout_width="260dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="32dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="8dp"
                 android:ems="10"
                 android:hint="@string/product_stock"
                 android:inputType="textPersonName"
@@ -88,8 +85,8 @@
                 android:id="@+id/etCategory"
                 android:layout_width="260dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="32dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="8dp"
                 android:ems="10"
                 android:hint="@string/product_category"
                 android:inputType="textPersonName"
@@ -99,8 +96,8 @@
                 android:id="@+id/etDescription"
                 android:layout_width="260dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="32dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="8dp"
                 android:ems="10"
                 android:hint="@string/product_description"
                 android:inputType="textPersonName"

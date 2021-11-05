@@ -5,10 +5,14 @@
       <map>
         <entry key="..\:/Users/CAROLINA/Desktop/ArtesanalWine/app/src/main/res/drawable/btn_style.xml" value="0.1" />
         <entry key="..\:/Users/CAROLINA/Desktop/ArtesanalWine/app/src/main/res/drawable/edt_style.xml" value="0.1" />
+        <entry key="..\:/Users/CAROLINA/Desktop/ArtesanalWine/app/src/main/res/layout-land/activity_add_product.xml" value="0.1" />
         <entry key="..\:/Users/CAROLINA/Desktop/ArtesanalWine/app/src/main/res/layout-land/activity_edit_products.xml" value="0.1358768406961178" />
+        <entry key="..\:/Users/CAROLINA/Desktop/ArtesanalWine/app/src/main/res/layout-sw320dp-land/activity_add_product.xml" value="0.1" />
         <entry key="..\:/Users/CAROLINA/Desktop/ArtesanalWine/app/src/main/res/layout-sw320dp-land/activity_edit_products.xml" value="0.1358768406961178" />
         <entry key="..\:/Users/CAROLINA/Desktop/ArtesanalWine/app/src/main/res/layout-sw320dp-port/activity_registrarse.xml" value="0.12335526315789473" />
+        <entry key="..\:/Users/CAROLINA/Desktop/ArtesanalWine/app/src/main/res/layout-sw480dp-land/activity_add_product.xml" value="0.118359375" />
         <entry key="..\:/Users/CAROLINA/Desktop/ArtesanalWine/app/src/main/res/layout-sw480dp-land/activity_edit_products.xml" value="0.1358768406961178" />
+        <entry key="..\:/Users/CAROLINA/Desktop/ArtesanalWine/app/src/main/res/layout-sw600dp-land/activity_add_product.xml" value="0.118359375" />
         <entry key="..\:/Users/CAROLINA/Desktop/ArtesanalWine/app/src/main/res/layout-sw600dp-land/activity_edit_products.xml" value="0.1358768406961178" />
         <entry key="..\:/Users/CAROLINA/Desktop/ArtesanalWine/app/src/main/res/layout/activity_add_product.xml" value="0.13355263157894737" />
         <entry key="..\:/Users/CAROLINA/Desktop/ArtesanalWine/app/src/main/res/layout/activity_edit_products.xml" value="0.12335526315789473" />

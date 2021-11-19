@@ -6,7 +6,7 @@
     <string name="registrarse">Registrarse</string>
     <string name="btn_edit">Editar</string>
     <string name="btn_delete">Eliminar</string>
-    <string name="btn_agregar">Agregar</string>
+    <string name="btn_agregar"></string>
     <string name="btn_update">Actualizar</string>
     <string name="btn_add">Agregar producto</string>
     <string name="product_name">Nombre Producto</string>
@@ -15,5 +15,6 @@
     <string name="product_category">Categoria</string>
     <string name="product_description">Descripcion</string>
     <string name="pick_image">Seleccionar imagen</string>
+    <string name="user_preference_key" />
 
 </resources>

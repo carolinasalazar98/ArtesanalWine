@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/CAROLINA/Desktop/ArtesanalWine/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/CAROLINA/Desktop/ArtesanalWine/app/src/main/res/drawable/btn_style.xml" value="0.1" />
         <entry key="..\:/Users/CAROLINA/Desktop/ArtesanalWine/app/src/main/res/drawable/edt_style.xml" value="0.1" />
+        <entry key="..\:/Users/CAROLINA/Desktop/ArtesanalWine/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/CAROLINA/Desktop/ArtesanalWine/app/src/main/res/layout-land/activity_add_product.xml" value="0.1" />
         <entry key="..\:/Users/CAROLINA/Desktop/ArtesanalWine/app/src/main/res/layout-land/activity_edit_products.xml" value="0.1358768406961178" />
         <entry key="..\:/Users/CAROLINA/Desktop/ArtesanalWine/app/src/main/res/layout-sw320dp-land/activity_add_product.xml" value="0.1" />
@@ -20,7 +22,7 @@
         <entry key="..\:/Users/CAROLINA/Desktop/ArtesanalWine/app/src/main/res/layout/activity_login.xml" value="0.7039473684210527" />
         <entry key="..\:/Users/CAROLINA/Desktop/ArtesanalWine/app/src/main/res/layout/activity_mostrar.xml" value="0.1092896174863388" />
         <entry key="..\:/Users/CAROLINA/Desktop/ArtesanalWine/app/src/main/res/layout/activity_registrarse.xml" value="0.7976973684210527" />
-        <entry key="..\:/Users/CAROLINA/Desktop/ArtesanalWine/app/src/main/res/layout/product_item.xml" value="0.1" />
+        <entry key="..\:/Users/CAROLINA/Desktop/ArtesanalWine/app/src/main/res/layout/product_item.xml" value="0.15" />
         <entry key="..\:/Users/CAROLINA/Desktop/ArtesanalWine/app/src/main/res/menu/menu.xml" value="0.13355263157894737" />
       </map>
     </option>

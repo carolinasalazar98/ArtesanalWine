@@ -3,7 +3,9 @@ package com.example.miproyecto;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Patterns;
@@ -48,11 +50,14 @@ public class LoginActivity extends AppCompatActivity {
         setContentView (R.layout.activity_login);
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
+        saveUserPreferences(this);
 
         etemail = findViewById (R.id.etemail);
         etpassword = findViewById (R.id.etpassword);
 
     }
+
+
 
     public void login(View view) {
         String email = etemail.getText().toString();
@@ -79,6 +84,7 @@ public class LoginActivity extends AppCompatActivity {
                                         "Login exitoso", Toast.LENGTH_SHORT).show ();
                                 Intent intent = new Intent (getApplicationContext (), ListProductsActivity.class);
                                 startActivity(intent);
+                                saveUserPreferences (getApplicationContext ());
                             } else {
                                 Toast.makeText (getApplicationContext (), "Login Fallido", Toast.LENGTH_SHORT).show ();
                             }
@@ -86,7 +92,22 @@ public class LoginActivity extends AppCompatActivity {
                     });
 
         }
+    }
+    private void saveUserPreferences(Context context ) {
+        db.collection ("products");
+        String email = "dycaro750@gmail.com";
+        String rol = "";
+        String name = "carolina";
 
+        SharedPreferences sharedPref = context.getSharedPreferences(
+                getString(R.string.user_preference_key), Context.MODE_PRIVATE);
+
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putBoolean("status", true);
+        editor.putString("email", email);
+        editor.putString("rol", rol);
+        editor.putString("name", name);
+        editor.commit();
     }
 
     public void Registrarse(View view){

@@ -108,13 +108,14 @@
 
             <Button
                 android:id="@+id/btnproduct"
-                android:layout_width="230dp"
-                android:layout_height="55dp"
+                android:layout_width="256dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/btn_style"
-                android:onClick="agregar"
+                android:onClick="uploadImage"
                 android:text="@string/btn_add" />
+
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

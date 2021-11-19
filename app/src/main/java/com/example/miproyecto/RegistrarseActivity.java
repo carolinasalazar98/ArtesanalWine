@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
+import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,10 +30,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
 
-public class RegistrarseActivity extends AppCompatActivity {
+public class RegistrarseActivity extends AppCompatActivity  implements AdapterView.OnItemSelectedListener {
 
     Spinner spinner1;
     private EditText jetnombre,jetemail,jetpais, jetciudad, jetclave,jetnomtienda;
+    private  String rol;
 
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
@@ -52,7 +55,7 @@ public class RegistrarseActivity extends AppCompatActivity {
 
         spinner1=findViewById (R.id.spinner);
 
-        String [] opciones={"Rol","°Usuario","°Vendedor"};
+        String [] opciones={"Rol","Usuario","Vendedor"};
         ArrayAdapter <String> adapter = new ArrayAdapter<String> (this, android.R.layout.simple_spinner_item,opciones);
         spinner1.setAdapter (adapter);
 
@@ -117,6 +120,7 @@ public class RegistrarseActivity extends AppCompatActivity {
                             user.put("pais", pais);
                             user.put("ciudad", ciudad);
                             user.put("clave", password);
+                            user.put ("rol", spinner1.getSelectedItem().toString());
                             user.put("tienda", nomtienda);
                             db.collection("artesanalwine")
                                     .add(user)
@@ -146,4 +150,13 @@ public class RegistrarseActivity extends AppCompatActivity {
         startActivity(intlogin);
     }
 
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        rol = parent.getItemAtPosition (position).toString ();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
 }

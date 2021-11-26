@@ -15,6 +15,6 @@
     <string name="product_category">Categoria</string>
     <string name="product_description">Descripcion</string>
     <string name="pick_image">Seleccionar imagen</string>
-    <string name="user_preference_key" />
+    <string name="user_preference_key">preferences</string>
 
 </resources>

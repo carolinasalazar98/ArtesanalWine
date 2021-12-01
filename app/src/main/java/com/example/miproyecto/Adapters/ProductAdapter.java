@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
@@ -12,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.miproyecto.MainActivity;
 import com.example.miproyecto.R;
 import com.example.miproyecto.databinding.ProductItemBinding;
 import com.example.miproyecto.entities.ProductEntity;
@@ -58,6 +60,12 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
                 .error (R.drawable.vinos)
                 //.circleCrop()
                 .into(holder.itemBinding.ivProductImg);
+
+        String role = "vendedor";
+        if(role.equals("vendedor")){
+            holder.itemBinding.btnEdit.setVisibility(View.VISIBLE);
+        }
+
         AlertDialog.Builder builder = new AlertDialog.Builder (context);
         builder.setPositiveButton ("Aceptar", new DialogInterface.OnClickListener () {
             @Override

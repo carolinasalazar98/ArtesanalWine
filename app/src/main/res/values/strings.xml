@@ -3,7 +3,7 @@
     <string name="user">Usuario</string>
     <string name="password">Contraseña</string>
     <string name="ingresar">Ingresar</string>
-    <string name="registrarse">Registrarse</string>
+    <string name="btn_registrarse">Registrarse</string>
     <string name="btn_edit">Editar</string>
     <string name="btn_delete">Eliminar</string>
     <string name="btn_agregar"></string>

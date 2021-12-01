@@ -93,17 +93,6 @@
                     android:text="@string/btn_delete"
                     android:textSize="11dp" />
 
-                <Button
-                    android:id="@+id/btnAgregar"
-                    android:layout_width="48dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/ic_add"
-                    android:onClick="agregar"
-                    android:text="@string/btn_agregar"
-                    tools:ignore="SpeakableTextPresentCheck" />
-
 
             </LinearLayout>
 

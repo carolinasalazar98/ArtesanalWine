@@ -74,8 +74,8 @@
         android:layout_marginBottom="50dp"
         android:layout_weight="4"
         android:background="@drawable/btn_style"
+        android:onClick="@string/btn_registrarse"
         android:text="Registrarse"
-        android:onClick="Registrarse"
         android:textSize="25dp" />
 
 
